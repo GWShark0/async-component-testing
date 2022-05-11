@@ -1,0 +1,8 @@
+.posts-view {
+  max-width: 800px;
+  margin: auto;
+}
+
+.posts-view * + * {
+  margin-top: 8px;
+}
