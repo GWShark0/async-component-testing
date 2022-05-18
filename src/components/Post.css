@@ -1,12 +1,12 @@
 .post {
-  padding: 8px;
+  padding: 0.5rem;
   color: #a9adc1;
   background-color: #2e3039;
   border: 1px solid #4b4c53;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .post__author {
-  margin: 0 0 8px;
+  margin: 0 0 0.5rem;
   color: #ffffff;
 }

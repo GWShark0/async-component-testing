@@ -1,19 +1,10 @@
-import { useEffect, useState } from 'react';
+import usePosts from '../hooks/usePosts';
 import Post from './Post';
 
 import './PostsView.css';
 
 export default function PostsView() {
-  const [posts, setPosts] = useState([]);
-
-  useEffect(() => {
-    async function fetchPosts() {
-      const response = await fetch('/posts');
-      const data = await response.json();
-      setPosts(data);
-    }
-    fetchPosts();
-  }, []);
+  const posts = usePosts();
 
   return (
     <div className="posts-view">

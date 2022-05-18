@@ -1,10 +1,13 @@
 import { render, screen } from '@testing-library/react';
-import PostsView from './PostsView';
+import PostsView from '../PostsView';
 
-it('should show some posts', async () => {
+it('should render some posts', async () => {
   render(<PostsView />);
 
   expect(
-    await screen.findByRole('heading', { name: /alice/i })
+    await screen.findByRole('heading', { name: /post a/i })
+  ).toBeInTheDocument();
+  expect(
+    await screen.findByText(/this is the body of post a./i)
   ).toBeInTheDocument();
 });
